@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4A54A979199A7DF6004EFFEA /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A54A978199A7DF6004EFFEA /* main.cpp */; };
+		4A54A979199A7DF6004EFFEA /* Lab5.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A54A978199A7DF6004EFFEA /* Lab5.cpp */; };
 		4A54A97B199A7DF6004EFFEA /* Sets_Lab5.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4A54A97A199A7DF6004EFFEA /* Sets_Lab5.1 */; };
+		4A54A983199A7E53004EFFEA /* Nickel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A54A981199A7E53004EFFEA /* Nickel.cpp */; };
+		4A54A986199A7E65004EFFEA /* NickelCollection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A54A984199A7E65004EFFEA /* NickelCollection.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,8 +28,12 @@
 
 /* Begin PBXFileReference section */
 		4A54A975199A7DF6004EFFEA /* Sets_Lab5 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Sets_Lab5; sourceTree = BUILT_PRODUCTS_DIR; };
-		4A54A978199A7DF6004EFFEA /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		4A54A978199A7DF6004EFFEA /* Lab5.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Lab5.cpp; sourceTree = "<group>"; };
 		4A54A97A199A7DF6004EFFEA /* Sets_Lab5.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Sets_Lab5.1; sourceTree = "<group>"; };
+		4A54A981199A7E53004EFFEA /* Nickel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Nickel.cpp; sourceTree = "<group>"; };
+		4A54A982199A7E53004EFFEA /* Nickel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Nickel.h; sourceTree = "<group>"; };
+		4A54A984199A7E65004EFFEA /* NickelCollection.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NickelCollection.cpp; sourceTree = "<group>"; };
+		4A54A985199A7E65004EFFEA /* NickelCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NickelCollection.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +66,11 @@
 		4A54A977199A7DF6004EFFEA /* Sets_Lab5 */ = {
 			isa = PBXGroup;
 			children = (
-				4A54A978199A7DF6004EFFEA /* main.cpp */,
+				4A54A978199A7DF6004EFFEA /* Lab5.cpp */,
+				4A54A981199A7E53004EFFEA /* Nickel.cpp */,
+				4A54A982199A7E53004EFFEA /* Nickel.h */,
+				4A54A984199A7E65004EFFEA /* NickelCollection.cpp */,
+				4A54A985199A7E65004EFFEA /* NickelCollection.h */,
 				4A54A97A199A7DF6004EFFEA /* Sets_Lab5.1 */,
 			);
 			path = Sets_Lab5;
@@ -117,7 +127,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A54A979199A7DF6004EFFEA /* main.cpp in Sources */,
+				4A54A986199A7E65004EFFEA /* NickelCollection.cpp in Sources */,
+				4A54A979199A7DF6004EFFEA /* Lab5.cpp in Sources */,
+				4A54A983199A7E53004EFFEA /* Nickel.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

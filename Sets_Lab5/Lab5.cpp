@@ -6,13 +6,14 @@
 //  Copyright (c) 2014 Devon Smith. All rights reserved.
 //
 
+#include "NickelCollection.h"
 #include <iostream>
 
 int main(int argc, const char * argv[])
 {
 
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    NickelCollection mine;
+    mine.collection();
     return 0;
 }
 
