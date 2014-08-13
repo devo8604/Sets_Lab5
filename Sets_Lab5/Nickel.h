@@ -15,23 +15,24 @@ class Nickel
 {
 public:
     //constructor
-    Nickel(std::string mint, int year);
+    Nickel(char mint, int year);
     
     //Getters
-    std::string getMint() const;
+    char getMint() const;
     int getYear() const;
     
     bool operator< (const Nickel LHS) const
     {
         return getYear() < LHS.getYear() ? true : false;
     }
+    
 private:
     //Variables
     std::string mint;
     int year;
     
     //Setters
-    void setMint(std::string inMint);
+    void setMint(char inMint);
     void setYear(int inYear);
 };
 

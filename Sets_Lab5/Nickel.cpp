@@ -7,20 +7,19 @@
 //
 
 #include "Nickel.h"
-#include <string>
 
 using namespace std;
 
-string mint;
+char mint;
 int year;
 
-Nickel::Nickel(string mint, int year)
+Nickel::Nickel(char mint, int year)
 {
     setMint(mint);
     setYear(year);
 }
 
-void Nickel::setMint(string inMint)
+void Nickel::setMint(char inMint)
 {
     mint = inMint;
 }
@@ -30,7 +29,7 @@ void Nickel::setYear(int inYear)
     year = inYear;
 }
 
-string Nickel::getMint() const
+char Nickel::getMint() const
 {
     return mint;
 }
