@@ -14,15 +14,6 @@
 
 using namespace std;
 
-bool operator < (const Nickel& LHS, const Nickel& RHS) 
-{
-    return LHS.Nickel::getYear() < RHS.Nickel::getYear();
-}
-
-
-
-
-
 void NickelCollection::collection()
 {
     srand((unsigned) time(NULL));
@@ -39,11 +30,11 @@ void NickelCollection::collection()
     //Generates all of the nickels available
     for (int i = 1950; i < 2001; i++)
     {
-        availableNickels.insert(Nickel("P",i));
         availableNickels.insert(Nickel("D",i));
+        availableNickels.insert(Nickel("P",i));
         
     }
-
+    
     neededNickels(myCollection,availableNickels);
 }
 
@@ -51,20 +42,20 @@ void NickelCollection::collection()
 
 
 
-void NickelCollection::neededNickels(set<Nickel> myCollection,
-                                     multiset<Nickel> availableNickels)
+void NickelCollection::neededNickels(const set<Nickel>& myCollection,
+                                     const multiset<Nickel>& availableNickels)
 {
     multiset<Nickel> neededCoins;
-    
-    set_difference(availableNickels.begin(),
-                   availableNickels.end(),
-                   myCollection.begin(),
-                   myCollection.end(),
+
+    set_difference(availableNickels.cbegin(),
+                   availableNickels.cend(),
+                   myCollection.cbegin(),
+                   myCollection.cend(),
                    inserter(neededCoins,
                             neededCoins.begin()));
 
     cout << "This is the list of coins you have: " << "\n-----------------------------------" << endl;
-    for (multiset<Nickel>::iterator itr = myCollection.begin(); itr != myCollection.end(); itr++)
+    for (set<Nickel>::iterator itr = myCollection.begin(); itr != myCollection.end(); itr++)
     {
         cout << "Mint Code: " << itr->getMint() << " Year Made: " << itr->getYear() << endl;
     }
@@ -74,7 +65,6 @@ void NickelCollection::neededNickels(set<Nickel> myCollection,
     {
         cout << "Mint Code: " << itr->getMint() << " Year Made: " << itr->getYear() << endl;
     }
-    
 }
 
 

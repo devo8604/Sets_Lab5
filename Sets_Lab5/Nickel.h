@@ -20,6 +20,11 @@ public:
     //Getters
     std::string getMint() const;
     int getYear() const;
+    
+    bool operator< (const Nickel LHS) const
+    {
+        return getYear() < LHS.getYear() ? true : false;
+    }
 private:
     //Variables
     std::string mint;

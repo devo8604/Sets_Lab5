@@ -13,8 +13,6 @@
 #include <iostream>
 #include <set>
 
-#endif /* defined(__Sets_Lab5__NickelCollection__) */
-
 class NickelCollection
 {
 public:
@@ -23,6 +21,8 @@ public:
 private:
     std::string mint();
     int year();
-    void neededNickels(std::set<Nickel> myCollection,
-                       std::multiset<Nickel> availableNickels);
+    void neededNickels(const std::set<Nickel>& myCollection,
+                       const std::multiset<Nickel>& availableNickels);
 };
+
+#endif /* defined(__Sets_Lab5__NickelCollection__) */
