@@ -19,7 +19,7 @@ void NickelCollection::collection()
     srand((unsigned) time(NULL));
     
     set<Nickel> myCollection;
-    multiset<Nickel> availableNickels;
+    set<Nickel> availableNickels;
     
     //Generates my nickel collection
     while (myCollection.size() != 45)
@@ -43,9 +43,9 @@ void NickelCollection::collection()
 
 
 void NickelCollection::neededNickels(const set<Nickel>& myCollection,
-                                     const multiset<Nickel>& availableNickels)
+                                     const set<Nickel>& availableNickels)
 {
-    multiset<Nickel> neededCoins;
+    set<Nickel> neededCoins;
 
     set_difference(availableNickels.cbegin(),
                    availableNickels.cend(),
@@ -61,7 +61,7 @@ void NickelCollection::neededNickels(const set<Nickel>& myCollection,
     }
     
     cout << "\nThis is the list of coins you need: " << "\n-----------------------------------" << endl;
-    for (multiset<Nickel>::iterator itr = neededCoins.begin(); itr != neededCoins.end(); itr++)
+    for (set<Nickel>::iterator itr = neededCoins.begin(); itr != neededCoins.end(); itr++)
     {
         cout << "Mint Code: " << itr->getMint() << " Year Made: " << itr->getYear() << endl;
     }

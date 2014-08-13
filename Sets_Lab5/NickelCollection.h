@@ -22,7 +22,7 @@ private:
     char mint();
     int year();
     void neededNickels(const std::set<Nickel>& myCollection,
-                       const std::multiset<Nickel>& availableNickels);
+                       const std::set<Nickel>& availableNickels);
 };
 
 #endif /* defined(__Sets_Lab5__NickelCollection__) */

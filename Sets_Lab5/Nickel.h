@@ -20,15 +20,20 @@ public:
     //Getters
     char getMint() const;
     int getYear() const;
-    
+
     bool operator< (const Nickel LHS) const
     {
         return getYear() < LHS.getYear() ? true : false;
     }
+
+    bool operator== (const Nickel RHS) const
+    {
+        return (getMint() == RHS.getMint() && getYear() == RHS.getYear());
+    }
     
 private:
     //Variables
-    std::string mint;
+    char mint;
     int year;
     
     //Setters
