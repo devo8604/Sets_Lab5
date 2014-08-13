@@ -21,8 +21,8 @@ public:
 private:
     char mint();
     int year();
-    void neededNickels(std::set<Nickel>& myCollection,
-                       std::set<Nickel>& availableNickels);
+    void neededNickels(std::set<Nickel> myCollection,
+                       std::set<Nickel> availableNickels);
 };
 
 #endif /* defined(__Sets_Lab5__NickelCollection__) */

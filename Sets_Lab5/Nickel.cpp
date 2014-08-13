@@ -29,12 +29,12 @@ void Nickel::setYear(int inYear)
     year = inYear;
 }
 
-char Nickel::getMint() const
+const char Nickel::getMint() const
 {
     return mint;
 }
 
-int Nickel::getYear() const
+const int Nickel::getYear() const
 {
     return year;
 }

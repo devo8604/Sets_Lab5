@@ -34,20 +34,24 @@ void NickelCollection::collection()
         availableNickels.insert(Nickel('P',i));
         
     }
-    
-    neededNickels(myCollection,availableNickels);
+    cout << "This is the list of coins you have: " << "\n-----------------------------------" << endl;
+    for (set<Nickel>::iterator itr = availableNickels.begin(); itr != availableNickels.end(); itr++)
+    {
+        cout << "Mint Code: " << itr->getMint() << " Year Made: " << itr->getYear() << endl;
+    }
+    //neededNickels(myCollection,availableNickels);
 }
 
 
 
 
 
-void NickelCollection::neededNickels(set<Nickel>& myCollection,
-                                    set<Nickel>& availableNickels)
+void NickelCollection::neededNickels(set<Nickel> myCollection,
+                                     set<Nickel> availableNickels)
 {
     set<Nickel> neededCoins;
 
-    set_difference(availableNickels.begin(),
+    set_symmetric_difference(availableNickels.begin(),
                    availableNickels.end(),
                    myCollection.begin(),
                    myCollection.end(),
