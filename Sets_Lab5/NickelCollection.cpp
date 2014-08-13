@@ -34,12 +34,14 @@ void NickelCollection::collection()
         availableNickels.insert(Nickel('P',i));
         
     }
+
     cout << "This is the list of coins you have: " << "\n-----------------------------------" << endl;
     for (set<Nickel>::iterator itr = availableNickels.begin(); itr != availableNickels.end(); itr++)
     {
         cout << "Mint Code: " << itr->getMint() << " Year Made: " << itr->getYear() << endl;
     }
-    //neededNickels(myCollection,availableNickels);
+
+    neededNickels(myCollection,availableNickels);
 }
 
 

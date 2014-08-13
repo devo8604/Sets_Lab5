@@ -15,20 +15,21 @@ class Nickel
 {
 public:
     //constructor
+    Nickel();
     Nickel(char mint, int year);
     
     //Getters
     const char getMint() const;
     const int getYear() const;
 
-    bool operator < (const Nickel LHS) const
+    bool operator< (const Nickel LHS) const
     {
         return getYear() < LHS.getYear() ? true : false;
     }
 
-    bool operator == (const Nickel RHS) const
+    bool operator== (const Nickel RHS) const
     {
-        return (getMint() == RHS.getMint()) && (getYear() == RHS.getYear()) ? true : false;
+        return (getMint() == RHS.getMint() && getYear() == RHS.getYear()) ? true : false;
     }
     
 private:
