@@ -19,7 +19,7 @@ public:
     void collection();
     
 private:
-    std::string mint();
+    char mint();
     int year();
     void neededNickels(const std::set<Nickel>& myCollection,
                        const std::multiset<Nickel>& availableNickels);

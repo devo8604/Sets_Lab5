@@ -30,8 +30,8 @@ void NickelCollection::collection()
     //Generates all of the nickels available
     for (int i = 1950; i < 2001; i++)
     {
-        availableNickels.insert(Nickel("D",i));
-        availableNickels.insert(Nickel("P",i));
+        availableNickels.insert(Nickel('D',i));
+        availableNickels.insert(Nickel('P',i));
         
     }
     
@@ -71,17 +71,17 @@ void NickelCollection::neededNickels(const set<Nickel>& myCollection,
 
 
 
-string NickelCollection::mint()
+char NickelCollection::mint()
 {
     int year = 0;
-    string mint;
+    char mint;
     year = rand() % 10;
 
     if (year < 5)
     {
-        mint = "D";
+        mint = 'D';
     } else {
-        mint = "P";
+        mint = 'P';
     }
     return mint;
 }
