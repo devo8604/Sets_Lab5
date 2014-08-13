@@ -42,15 +42,15 @@ void NickelCollection::collection()
 
 
 
-void NickelCollection::neededNickels(const set<Nickel>& myCollection,
-                                     const set<Nickel>& availableNickels)
+void NickelCollection::neededNickels(set<Nickel>& myCollection,
+                                    set<Nickel>& availableNickels)
 {
     set<Nickel> neededCoins;
 
-    set_difference(availableNickels.cbegin(),
-                   availableNickels.cend(),
-                   myCollection.cbegin(),
-                   myCollection.cend(),
+    set_difference(availableNickels.begin(),
+                   availableNickels.end(),
+                   myCollection.begin(),
+                   myCollection.end(),
                    inserter(neededCoins,
                             neededCoins.begin()));
 
