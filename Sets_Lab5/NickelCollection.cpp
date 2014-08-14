@@ -70,11 +70,11 @@ void NickelCollection::neededNickels(set<Nickel> myCollection,
         for (set<Nickel>::iterator sItr = myCollection.begin(); sItr != myCollection.end(); sItr++)
         {
             i++;
-            if ((oItr->getMint() == sItr->getMint()) && (oItr->getYear() == sItr->getYear()))
+            if (oItr->getMint() == sItr->getMint() && oItr->getYear() == sItr->getYear())
             {
                 break;
             }
-            else if (i == 45)
+            else if (i == myCollection.size())
             {
                 neededCoins.insert(Nickel(oItr->getMint(), oItr->getYear()));
             }
