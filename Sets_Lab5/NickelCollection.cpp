@@ -64,6 +64,8 @@ void NickelCollection::neededNickels(set<Nickel> myCollection,
                                      multiset<Nickel> availableNickels)
 {
     multiset<Nickel> neededCoins;
+    
+    //My Algorithm for set_symmetric_difference since I couldn't get that algorithm to work...
     for (multiset<Nickel>::iterator oItr = availableNickels.begin(); oItr != availableNickels.end(); oItr++)
     {
         int i = 0;
