@@ -19,7 +19,7 @@ void NickelCollection::collection()
     srand((unsigned) time(NULL));
     
     set<Nickel> myCollection;
-    set<Nickel> availableNickels;
+    multiset<Nickel> availableNickels;
     
     //Generates my nickel collection
     while (myCollection.size() != 45)
@@ -28,17 +28,11 @@ void NickelCollection::collection()
     }
     
     //Generates all of the nickels available
-    for (int i = 1950; i < 2001; i++)
+    for (int i = 1950; i < 2000; i++)
     {
         availableNickels.insert(Nickel('D',i));
         availableNickels.insert(Nickel('P',i));
         
-    }
-
-    cout << "This is the list of coins you have: " << "\n-----------------------------------" << endl;
-    for (set<Nickel>::iterator itr = availableNickels.begin(); itr != availableNickels.end(); itr++)
-    {
-        cout << "Mint Code: " << itr->getMint() << " Year Made: " << itr->getYear() << endl;
     }
 
     neededNickels(myCollection,availableNickels);
@@ -49,17 +43,27 @@ void NickelCollection::collection()
 
 
 void NickelCollection::neededNickels(set<Nickel> myCollection,
-                                     set<Nickel> availableNickels)
+                                     multiset<Nickel> availableNickels)
 {
-    set<Nickel> neededCoins;
-
-    set_symmetric_difference(availableNickels.begin(),
-                   availableNickels.end(),
-                   myCollection.begin(),
-                   myCollection.end(),
-                   inserter(neededCoins,
-                            neededCoins.begin()));
-
+    multiset<Nickel> neededCoins;
+    
+    for (multiset<Nickel>::iterator oItr = availableNickels.begin(); oItr != availableNickels.end(); oItr++) {
+        int i = 0;
+        for (set<Nickel>::iterator sItr = myCollection.begin(); sItr != myCollection.end(); sItr++) {
+            i++;
+            if (oItr->getMint() == sItr->getMint() && oItr->getYear() == sItr->getYear()) {
+                break;
+            }
+            else if (i == myCollection.size())
+            {
+                neededCoins.insert(Nickel(oItr->getMint(), oItr->getYear()));
+            }
+        }
+    }
+    
+    cout << myCollection.size() << endl;
+    cout << availableNickels.size() << endl;
+    cout << neededCoins.size() << endl;
     cout << "This is the list of coins you have: " << "\n-----------------------------------" << endl;
     for (set<Nickel>::iterator itr = myCollection.begin(); itr != myCollection.end(); itr++)
     {
@@ -67,7 +71,7 @@ void NickelCollection::neededNickels(set<Nickel> myCollection,
     }
     
     cout << "\nThis is the list of coins you need: " << "\n-----------------------------------" << endl;
-    for (set<Nickel>::iterator itr = neededCoins.begin(); itr != neededCoins.end(); itr++)
+    for (multiset<Nickel>::iterator itr = neededCoins.begin(); itr != neededCoins.end(); itr++)
     {
         cout << "Mint Code: " << itr->getMint() << " Year Made: " << itr->getYear() << endl;
     }
