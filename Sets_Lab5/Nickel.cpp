@@ -1,15 +1,34 @@
+//*************************************************************************
+// TITLE: 			   	STL Set Lab
+// FILENAME:            Nickel.cpp
+// PREPARED FOR:        CS230
+// PROGRAMMER(S):       Devon J. Smith
+// DEVELOPMENT DATE:    08/13/14
+// COMPILER USED:       Apple LLVM Version 5.1
+// TARGET PLATFORM:     Mac OS X i386 & x86_64
+//=========================================================================
+//                           PROJECT FILES
+//    <LIST ALL PROGRAM AND HEADER FILES IN THE PROJECT HERE>
+//		lab5.cpp (main)
+//		Nickel.h
+//		Nickel.cpp
+//		NickelCollection.h
+//		NickelCollection.cpp
+//=========================================================================
+//   		REVISION HISTORY
+//   List revisions made to the Program
 //
-//  Nickel.cpp
-//  Sets_Lab5
+//   DATE     PROGRAMMER            DESCRIPTION OF CHANGES MADE
+//	 08/13/14 Devon J. Smith        Original
 //
-//  Created by Devon Smith on 8/12/14.
-//  Copyright (c) 2014 Devon Smith. All rights reserved.
-//
-
+//=========================================================================
+//                          INCLUDE FILES
 #include "Nickel.h"
 
 using namespace std;
-
+//*************************************************************************
+//             Definition of member functions for class Entry
+//*************************************************************************
 char mint;
 int year;
 
